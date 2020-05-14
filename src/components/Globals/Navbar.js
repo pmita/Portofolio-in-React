@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
-import {Link} from 'gatsby'
 
 import { FaLinkedin, FaCodepen , FaGithub , FaFilePdf } from 'react-icons/fa';
+
+import myResume from "../../images/jr_dev_resume.pdf"
 
 export default class Navbar extends Component {
     /*Defining a constructor for us to further access the state variables */   
@@ -26,7 +27,7 @@ export default class Navbar extends Component {
             <header>
                 <div className="container">
                     <nav className="navbar navbar-expand-lg navbar-light">
-                        <Link to="/" className="navbar-brand">Panos Mita</Link>
+                        <a href="#" className="navbar-brand">Panos Mita</a>
 
                         <button className="navbar-toggler" 
                                 type="button" 
@@ -41,10 +42,10 @@ export default class Navbar extends Component {
 
                     <div className={this.state.css} id="navbarNav">
                         <ul className="navbar-nav ml-lg-auto">
-                            <li className="nav-item"><Link to="/" className="nav-link"><span><FaLinkedin /></span> Linkedin</Link></li>
-                            <li className="nav-item"><Link to="/" className="nav-link"><span><FaCodepen /></span> CodePen</Link></li>
-                            <li className="nav-item"><Link to="/" className="nav-link"><span><FaGithub /></span> Github</Link></li>
-                            <li className="nav-item"><Link to="/" className="nav-link"><span><FaFilePdf /></span> Resume</Link></li>
+                            <li className="nav-item"><a href="https://www.linkedin.com/in/pmita/" rel="noopener noreferrer" target="_blank" className="nav-link"><span><FaLinkedin /></span> Linkedin</a></li>
+                            <li className="nav-item"><a href="https://codepen.io/pmita" rel="noopener noreferrer" target="_blank" className="nav-link"><span><FaCodepen /></span> CodePen</a></li>
+                            <li className="nav-item"><a href="https://github.com/pmita" rel="noopener noreferrer" target="_blank" className="nav-link"><span><FaGithub /></span> Github</a></li>
+                            <li className="nav-item"><a href={myResume} rel="noopener noreferrer" target="_blank" download="myResume" className="nav-link"><span><FaFilePdf /></span> Resume</a></li>
                         </ul>
                     </div>
                     </nav>

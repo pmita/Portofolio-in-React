@@ -4,16 +4,19 @@ export default class WorkExperience extends Component {
     openCity = (e, pastEmployerName) =>{
         var i, tabcontent, tablinks;
 
+        //Hide all Tab content
         tabcontent = document.getElementsByClassName("tabcontent");
         for (i=0; i < tabcontent.length; i++){
           tabcontent[i].style.display = "none";
         }
 
+        //Hide all Tab links
         tablinks = document.getElementsByClassName("tablinks");
         for (i = 0; i < tablinks.length; i++) {
            tablinks[i].className = tablinks[i].className.replace(" active", "");
         }
 
+        //Display only the ones the user has pressed on
         document.getElementById(pastEmployerName).style.display = "block";
         e.currentTarget.className += " active";
     };

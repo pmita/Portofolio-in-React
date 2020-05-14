@@ -15,6 +15,8 @@ const IndexPage = ({data}) => (
     
     <About />
     <WorkExperience />
+
+    <a href="portofolio-project">Show me your work</a>
   </Layout>
 )
 

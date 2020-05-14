@@ -32,18 +32,3 @@ export default function Banner({image_toDisplay}) {
         </>
     );
 }
-
-
-/*<BackgroundImage className={styleClass} 
-fluid={backgroundImage}
->
-<h1 className="title text-uppercase text-center display-6 font-weight-bold">
-{title}
-</h1>
-{children}
-</BackgroundImage>
-
-Header.defaultProps = {
-    title: "default title",
-    styleClass: "default-background"
-}*/
