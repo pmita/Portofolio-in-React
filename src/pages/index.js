@@ -7,6 +7,10 @@ import MiniMe from "../components/Globals/MiniMe"
 import About from "../components/Globals/About"
 import WorkExperience from "../components/Globals/WorkExperience"
 
+import ProjectSection from "../Home/ProjectSection"
+
+import Img from "gatsby-image";
+
 const IndexPage = ({data}) => (
   <Layout>
     <Banner image_toDisplay={data.bannerImage.childImageSharp.fluid} />
@@ -16,7 +20,7 @@ const IndexPage = ({data}) => (
     <About />
     <WorkExperience />
 
-    <a href="portofolio-project">Show me your work</a>
+    <ProjectSection items={data.projectsFromCMS} />
   </Layout>
 )
 
@@ -34,6 +38,22 @@ export const query = graphql`
         fixed (width:300, height:300){
           ...GatsbyImageSharpFixed
         }
+      }
+    }
+    projectsFromCMS: allContentfulProjectBrief{
+      edges{
+       node{
+          id
+          projectTitle
+          projectTechnologies
+          projectBrief
+          projectMainMediaField{
+            fixed (width:300){
+              ...GatsbyContentfulFixed_tracedSVG
+            }
+          }
+          currentProjectLink
+       }
       }
     }
 }`;

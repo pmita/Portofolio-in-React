@@ -185,6 +185,21 @@ footer .row{
 }
 
 
+.btnD2 {
+  margin: 1em;
+  color: #ff2670;
+  padding: 10px 20px;
+  border: none;
+  font-weight: 800;
+  transition: all 300ms ease-in-out .1ms;
+}
+
+.btnD2:hover{
+  color:#ffffff;
+  text-decoration:none;
+  background-color:#ff2670;
+}
+
 @media (max-width: 768px){
   /*------------Navigation Section stling------------*/
    .navbar-collapse{
@@ -236,7 +251,7 @@ footer .row{
   }
    
    .target-banner-img{
-    width:350px; 
+    width:300px; 
     height:auto;
     margin:15% auto 0;
   }
