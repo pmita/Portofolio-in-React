@@ -31,8 +31,18 @@ export const portofolioProjectQuery = graphql`
             projectDiscoveryPhase{
                 projectDiscoveryPhase
             }
+            projectDiscoveryPhaseMedia{
+              fluid (quality:100){
+                  ...GatsbyContentfulFluid_tracedSVG
+              }
+            }
             projectArchitecture{
-				projectArchitecture
+				      projectArchitecture
+            }
+            projectArchitectureMedia{
+              fluid (quality:100){
+                  ...GatsbyContentfulFluid_tracedSVG
+              }
             }
             projectLearningOutcome{
                 projectLearningOutcome

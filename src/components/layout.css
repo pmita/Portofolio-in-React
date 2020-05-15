@@ -200,6 +200,12 @@ footer .row{
   background-color:#ff2670;
 }
 
+.project-img{
+  width:700px; 
+  height:auto;
+  margin:3% auto;
+}
+
 @media (max-width: 768px){
   /*------------Navigation Section stling------------*/
    .navbar-collapse{
@@ -238,6 +244,10 @@ footer .row{
        border:none;
        border-right:3px solid rgba(111,181,251,1);
    }
+
+   .project-img{
+    width:600px; 
+  }
 }
 
 @media (max-width: 576px){
@@ -270,5 +280,9 @@ footer .row{
   .tab button:hover, .tab button.active {
     border:none;
     border-bottom:3px solid rgba(111,181,251,1);
+  }
+
+  .project-img{
+    width:300px; 
   }
 }

@@ -2,14 +2,14 @@ import React from "react"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+
 import Banner from "../components/Globals/Banner"
 import MiniMe from "../components/Globals/MiniMe"
 import About from "../components/Globals/About"
 import WorkExperience from "../components/Globals/WorkExperience"
-
 import ProjectSection from "../Home/ProjectSection"
 
-import Img from "gatsby-image";
+
 
 const IndexPage = ({data}) => (
   <Layout>

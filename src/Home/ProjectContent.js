@@ -31,7 +31,7 @@ export default class ProjectContent extends Component{
             
                         <div className="col-sm-12 text-center">
                             <Img fluid={this.state.projectItem.projectMainMediaField.fluid}
-                                    className="target-banner-img"/>
+                                    className="project-img"/>
                         </div>
                     </div>
                 </div>
@@ -46,6 +46,11 @@ export default class ProjectContent extends Component{
                         <div className="col-sm-12 ">     
                             <p><ReactMarkdown source={this.state.projectItem.projectDiscoveryPhase.projectDiscoveryPhase} /></p>
                         </div>
+
+                        <div className="col-sm-12 text-center">
+                            <Img fluid={this.state.projectItem.projectDiscoveryPhaseMedia.fluid}
+                                    className="project-img"/>
+                        </div>
                     </div>
                 </div>
 
@@ -57,6 +62,11 @@ export default class ProjectContent extends Component{
                     <div className="row text-center">
                         <div className="col-sm-12">         
                             <p><ReactMarkdown source={this.state.projectItem.projectArchitecture.projectArchitecture} /></p>
+                        </div>
+
+                        <div className="col-sm-12 text-center">
+                            <Img fluid={this.state.projectItem.projectArchitectureMedia.fluid}
+                                    className="project-img"/>
                         </div>
                     </div>
                 </div>
