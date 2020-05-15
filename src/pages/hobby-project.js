@@ -16,31 +16,41 @@ const IndexPage = ({data}) => (
 
 export const hobbyProjectQuery = graphql`
 {
-    projectPortofolio: allContentfulProjectBrief{
-        edges{
-         node{
-             id
-            projectTitle
-            projectTechnologies
-            projectBrief
-            projectMainMediaField{
-                fluid (quality:100){
-                    ...GatsbyContentfulFluid_tracedSVG
-                }
+  projectPortofolio: allContentfulProjectBrief{
+      edges{
+       node{
+           id
+          projectTitle
+          projectTechnologies
+          projectBrief
+          projectMainMediaField{
+              fluid (quality:100){
+                  ...GatsbyContentfulFluid_tracedSVG
               }
-            projectDiscoveryPhase{
-                projectDiscoveryPhase
             }
-            projectArchitecture{
-				projectArchitecture
+          projectDiscoveryPhase{
+              projectDiscoveryPhase
+          }
+          projectDiscoveryPhaseMedia{
+            fluid (quality:100){
+                ...GatsbyContentfulFluid_tracedSVG
             }
-            projectLearningOutcome{
-                projectLearningOutcome
+          }
+          projectArchitecture{
+            projectArchitecture
+          }
+          projectArchitectureMedia{
+            fluid (quality:100){
+                ...GatsbyContentfulFluid_tracedSVG
             }
-            nextProjectLink
-         }
-        }
-    }
+          }
+          projectLearningOutcome{
+              projectLearningOutcome
+          }
+          nextProjectLink
+       }
+      }
+  }
 }`;
 
 export default IndexPage
